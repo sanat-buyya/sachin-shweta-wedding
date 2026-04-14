@@ -149,7 +149,7 @@ export default function Hero() {
       >
         <div className="">
           {/* Top Flower with Skeleton */}
-          <div className="relative w-full h-32 mb-4">
+          <div className="relative w-full h-32 mb-1">
             {!imageLoaded.flowerTop && (
               <Skeleton className="absolute inset-0 w-full h-full" />
             )}
@@ -164,32 +164,65 @@ export default function Hero() {
             />
           </div>
 
+          <div className="flex justify-center">
+            <img src="https://img.freepik.com/premium-vector/ganesha-illustration-with-lotus-ornate-swirls_369928-623.jpg?semt=ais_hybrid&w=740&q=80" alt=" ganesh" width={70} />
+          </div>
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={allImagesLoaded ? "visible" : "hidden"}
           >
+            <motion.p
+              variants={textVariants}
+              className=" text-green-600 text-md leading-relaxed font-['Cormorant_Garamond'] text-base"
+              whileHover={{ scale: 1.02 }}
+            >
+              Shree Honnikeri Siddeshwar Prasanna
+            </motion.p>
+            <motion.p
+              variants={textVariants}
+              className=" text-black mb-2 text-md leading-relaxed font-['Cormorant_Garamond'] text-base"
+              whileHover={{ scale: 1.02 }}
+            >
+              With the blessings of our parents
+            </motion.p>
+
             <motion.h1
               variants={nameVariants}
-              className="text-4xl font-['Great_Vibes'] bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent"
+              className="text-4xl mt-1 font-['Great_Vibes'] bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent"
             >
-              Sachin Kumar
+              Shweta
             </motion.h1>
+            <motion.p
+              variants={textVariants}
+              className=" text-orange-500 text-md leading-relaxed font-['Cormorant_Garamond'] text-base"
+              whileHover={{ scale: 1.02 }}
+            >
+              D/o. Smt. Bharati & Shri. Ashok Buyya R/o. Koutha(B)
+            </motion.p>
 
             <motion.p
               variants={textVariants}
               className="text-xl font-['Dancing_Script'] text-gray-600 my-2 relative"
               whileHover={{ scale: 1.1 }}
             >
-              <span className="relative">and</span>
+              <span className="relative">with</span>
             </motion.p>
 
             <motion.h1
               variants={nameVariants}
               className="text-4xl mt-3 font-['Great_Vibes'] bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent"
             >
-              Shweta
+              Sachin Kumar
             </motion.h1>
+            <motion.p
+              variants={textVariants}
+              className=" text-orange-500 text-md leading-relaxed font-['Cormorant_Garamond'] text-base"
+              whileHover={{ scale: 1.02 }}
+            >
+              S/o. Smt. Jagadevi & Shri. Chandrakant Madgul R/o. Ainapur
+            </motion.p>
 
             <motion.p
               variants={textVariants}
@@ -307,7 +340,7 @@ export default function Hero() {
             className="text-center p-4"
           >
             <motion.h3
-              className="text-xl font-bold text-gray-700 mb-3 tracking-wide font-['Cormorant_Garamond']"
+              className="text-xl font-bold text-black mb-3 tracking-wide font-['Cormorant_Garamond']"
               initial={{ y: -30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.6 }}
@@ -316,14 +349,14 @@ export default function Hero() {
                 transition: { delay: 2, duration: 2, repeat: Infinity },
               }}
             >
-              ⏰ TIME LEFT UNTIL THE WEDDING ⏰
+              ⏰ TIME LEFT UNTIL THE MUHURTHAM ⏰
             </motion.h3>
 
             <motion.div
               className="flex justify-center gap-3 mt-2 flex-wrap font-['dancing-script']"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.4, duration: 0.6 }}
+              transition={{ delay: 1, duration: 0.6 }}
             >
               {[
                 { label: "Days", value: timeLeft.days },
@@ -368,10 +401,17 @@ export default function Hero() {
               )}
             </div>
           </div>
+          <motion.p
+              variants={textVariants}
+              className=" text-black mt-1 text-md leading-relaxed font-['dancing-script'] text-base"
+              whileHover={{ scale: 1.02 }}
+            >
+              Raghoji Function Hall, Kodambal, Rampur Cross, Chitguppa, Karnataka 585412
+            </motion.p>
 
           <button
             onClick={navigateToMaps}
-            className="mt-4 px-6 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full shadow-lg hover:from-pink-600 hover:to-rose-600 transition-colors duration-300 font-['Cormorant_Garamond']"
+            className="mt-2 px-6 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full shadow-lg hover:from-pink-600 hover:to-rose-600 transition-colors duration-300 font-['Cormorant_Garamond']"
           >
             View on Google Maps
           </button>
@@ -402,6 +442,18 @@ export default function Hero() {
         <div className="mt-4 mb-4 text-center text-gray-700 font-['Cormorant_Garamond'] font-bold text-sm px-4">
           THANK YOU FOR BEING A PART OF OUR JOURNEY! WE CAN'T WAIT TO CELEBRATE WITH YOU ON OUR SPECIAL DAY. SEE YOU ON MAY 11, 2026! 💖
         </div>
+
+        <div className="text-center mt-6">
+  <p className="text-sm tracking-widest text-black uppercase mb-1">
+    Best Compliments From
+  </p>
+
+  <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-pink-400 to-transparent mx-auto mt-1 mb-1"></div>
+
+  <h3 className="font-['Playfair_Display'] text-lg font-semibold text-orange-600 pb-2 drop-shadow-md">
+    All Buyya Family, Relatives & Friends
+  </h3>
+</div>
       </motion.div>
     </section>
   );

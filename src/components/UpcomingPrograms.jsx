@@ -50,7 +50,7 @@ function UpcomingPrograms() {
       date: "2026-05-09",
       time: "16:00",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DLCqSW6Zx8mxOgCQGyWvTsAdhKfFI6Exgg&s",
-      map: "https://maps.app.goo.gl/5NRfBVKcp7fb2GbR6",
+      map: "https://maps.app.goo.gl/LN29wcuEEmz7n6MJ6",
       datetime: "2026-05-09T16:00:00",
     },
     {
@@ -59,7 +59,7 @@ function UpcomingPrograms() {
       date: "2026-05-10",
       time: "15:00",
       image: "https://i.pinimg.com/736x/13/01/de/1301dec08d4ce489022f001fde5fc1fd.jpg",
-      map: "https://maps.app.goo.gl/5NRfBVKcp7fb2GbR6",
+      map: "https://maps.app.goo.gl/LN29wcuEEmz7n6MJ6",
       datetime: "2026-05-10T15:00:00",
     },
     {
@@ -232,7 +232,7 @@ function UpcomingPrograms() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`relative flex items-start gap-3 p-3 rounded-xl transition-all duration-300 backdrop-blur-xl border border-white/20
+                  className={`relative flex items-center gap-3 p-3 rounded-xl transition-all duration-300 backdrop-blur-xl border border-white/20
                     ${
                       isCurrent
                         ? "bg-pink-500/20 shadow-lg"
