@@ -3,6 +3,7 @@ import Flower from "../public/vibrant.webp";
 import Designline from "../public/designline.webp";
 import { useState, useEffect } from "react";
 import UpcomingPrograms from "./components/UpcomingPrograms";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Hero() {
   const [imageLoaded, setImageLoaded] = useState({
@@ -455,6 +456,7 @@ export default function Hero() {
   </h3>
 </div>
       </motion.div>
+      <Analytics />
     </section>
   );
 }
