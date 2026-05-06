@@ -233,28 +233,26 @@ export default function Hero() {
             </motion.p>
           </motion.div>
 
-          
-
-          {/* Calendar Section with Skeleton */}
-          <div className="flex flex-col items-center gap-4 mt-4">
-            {/* Teaser with Skeleton */}
-          <div className="relative w-full h-48 mt-4 ">
-            {!imageLoaded.teaser && (
-              <Skeleton className="absolute inset-0 w-full h-full" />
+          {/* Decorative Line with Skeleton */}
+          <div className="relative">
+            {!imageLoaded.designline && (
+              <Skeleton className="w-full h-8 mx-auto" />
             )}
-            <motion.video
-              src="https://res.cloudinary.com/dgrxmavho/video/upload/v1778046449/VID-20260506-WA0006_ij9zdh.mp4"
-              autoPlay
-              muted
-              loop
-              className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
-                imageLoaded.teaser ? 'opacity-100' : 'opacity-0'
-              } object-cover rounded-3xl px-2`}
-              onLoadedData={() => setImageLoaded(prev => ({ ...prev, teaser: true }))}
+            <motion.img
+              src={Designline}
+              alt="line"
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: imageLoaded.designline ? "100%" : 0, opacity: imageLoaded.designline ? 1 : 0 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+              onLoad={() => setImageLoaded(prev => ({ ...prev, designline: true }))}
+              className={`mx-auto transition-opacity duration-500 ${
+                imageLoaded.designline ? 'opacity-100' : 'opacity-0'
+              }`}
             />
-              
           </div>
 
+          {/* Calendar Section with Skeleton */}
+          <div className="flex justify-center">
             <div className="relative rounded-2xl w-80 overflow-hidden">
               {!imageLoaded.calendarBg && (
                 <Skeleton className="absolute inset-0 w-full h-full" />
@@ -386,8 +384,26 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
+          {/* Teaser with Skeleton */}
+          <div className="relative w-full h-48 mt-2 ">
+            {!imageLoaded.teaser && (
+              <Skeleton className="absolute inset-0 w-full h-full" />
+            )}
+            <motion.video
+              src="https://res.cloudinary.com/dgrxmavho/video/upload/v1778046449/VID-20260506-WA0006_ij9zdh.mp4"
+              autoPlay
+              muted
+              loop
+              className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                imageLoaded.teaser ? 'opacity-100' : 'opacity-0'
+              } object-cover rounded-3xl px-2`}
+              onLoadedData={() => setImageLoaded(prev => ({ ...prev, teaser: true }))}
+            />
+              
+          </div>
+
           {/* Location Map with Loading State */}
-          <div className="relative">
+          <div className="relative mt-4">
             <div className="w-full h-48 rounded-2xl overflow-hidden px-2">
               {!isClient && <Skeleton className="w-full h-full" />}
               {isClient && (
@@ -417,8 +433,6 @@ export default function Hero() {
           >
             View on Google Maps
           </button>
-
-          
 
           {/* Bottom Flower with Skeleton */}
           <div className="relative w-full h-32">
