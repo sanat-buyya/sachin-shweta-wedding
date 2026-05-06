@@ -233,26 +233,26 @@ export default function Hero() {
             </motion.p>
           </motion.div>
 
-          {/* Decorative Line with Skeleton */}
-          <div className="relative">
-            {!imageLoaded.designline && (
-              <Skeleton className="w-full h-8 mx-auto" />
+          {/* Teaser with Skeleton */}
+          <div className="relative w-full h-48 mt-4 ">
+            {!imageLoaded.teaser && (
+              <Skeleton className="absolute inset-0 w-full h-full" />
             )}
-            <motion.img
-              src={Designline}
-              alt="line"
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: imageLoaded.designline ? "100%" : 0, opacity: imageLoaded.designline ? 1 : 0 }}
-              transition={{ delay: 1.8, duration: 0.8 }}
-              onLoad={() => setImageLoaded(prev => ({ ...prev, designline: true }))}
-              className={`mx-auto transition-opacity duration-500 ${
-                imageLoaded.designline ? 'opacity-100' : 'opacity-0'
-              }`}
+            <motion.video
+              src="https://res.cloudinary.com/dgrxmavho/video/upload/v1778046449/VID-20260506-WA0006_ij9zdh.mp4"
+              autoPlay
+              muted
+              loop
+              className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                imageLoaded.teaser ? 'opacity-100' : 'opacity-0'
+              } object-cover rounded-3xl px-2`}
+              onLoadedData={() => setImageLoaded(prev => ({ ...prev, teaser: true }))}
             />
+              
           </div>
 
           {/* Calendar Section with Skeleton */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-4">
             <div className="relative rounded-2xl w-80 overflow-hidden">
               {!imageLoaded.calendarBg && (
                 <Skeleton className="absolute inset-0 w-full h-full" />
@@ -414,7 +414,7 @@ export default function Hero() {
             className="mt-2 px-6 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full shadow-lg hover:from-pink-600 hover:to-rose-600 transition-colors duration-300 font-['Cormorant_Garamond']"
           >
             View on Google Maps
-          </button>
+          </button>       
 
           {/* Bottom Flower with Skeleton */}
           <div className="relative w-full h-32">
