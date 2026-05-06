@@ -233,7 +233,11 @@ export default function Hero() {
             </motion.p>
           </motion.div>
 
-          {/* Teaser with Skeleton */}
+          
+
+          {/* Calendar Section with Skeleton */}
+          <div className="flex flex-col items-center gap-4 mt-4">
+            {/* Teaser with Skeleton */}
           <div className="relative w-full h-48 mt-4 ">
             {!imageLoaded.teaser && (
               <Skeleton className="absolute inset-0 w-full h-full" />
@@ -251,8 +255,6 @@ export default function Hero() {
               
           </div>
 
-          {/* Calendar Section with Skeleton */}
-          <div className="flex justify-center">
             <div className="relative rounded-2xl w-80 overflow-hidden">
               {!imageLoaded.calendarBg && (
                 <Skeleton className="absolute inset-0 w-full h-full" />
@@ -416,6 +418,7 @@ export default function Hero() {
             View on Google Maps
           </button>
 
+          
 
           {/* Bottom Flower with Skeleton */}
           <div className="relative w-full h-32">
